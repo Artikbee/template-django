@@ -16,6 +16,7 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
+# base
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -23,6 +24,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+# packages
+INSTALLED_APPS += [
+    'behaviors.apps.BehaviorsConfig',
+]
+
+# apps
+INSTALLED_APPS += [
+    'books',
 ]
 
 MIDDLEWARE = [
